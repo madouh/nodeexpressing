@@ -25,7 +25,6 @@ router.get('/info/:id', function(req, res, next) {
 	var x=req.params.id;
 	var y=name[x]
 	var z=age[x]
-	var m="Hello Mamdouh ...."
   res.render('info',{name:y,age:z});
 });
 
