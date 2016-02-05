@@ -1,0 +1,7 @@
+<h2>Edit User</h2> 
+<form action='/update/<%= user.id %>' method='post'>
+<input type="hidden" name="_method" value="put"/>
+Name :<input type='text' name='name' value='<%= user.name %>' >
+Email :<input type='email' name='email' value='<%= user.email %>' >
+<input type='submit' value='create'>
+</form>

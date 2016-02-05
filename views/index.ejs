@@ -1,0 +1,33 @@
+ <% include partials/head.ejs %>
+ 
+<h2>Welcome to Forms in Index Page In Express.js</h2>
+<% if(users.length>0) {%>
+<table border=2 class='table table-hover'>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Show</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+<% for(i in users) { %>
+<tr>
+<td><%= users[i].id %></td>
+<td><%= users[i].name %></td>
+<td><%= users[i].email %></td>
+<td><a href='/<%=users[i].id %>' class='btn btn-success'>Show</a></td>
+<td><a href='/<%=users[i].id %>/edit' class='btn btn-info'>Edit</a></td>
+<td><form action='/<%= users[i].id %>/delete' method='POST'>
+<input type="hidden" name="_method" value="delete"/>
+<input type='submit' value='Delete' class='delete_btn btn btn-danger'></td>
+</tr>
+<% } %>
+<tr>
+</table>
+<% } else{ %>
+<h3>No Users Found </h3>
+<% } %>
+<a href='/new' class='btn btn-success'>Create New User</a>
+<% include partials/footer.ejs %>
+

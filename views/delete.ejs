@@ -1,0 +1,5 @@
+<h2>Delete One <%= user.name %></h2>
+<form action='/<%= user.id %>/delete' method='POST'>
+<input type="hidden" name="_method" value="delete"/>
+<input type='submit' value='Delete'>
+</form>

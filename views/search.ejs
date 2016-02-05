@@ -1,0 +1,34 @@
+<% include partials/head.ejs %>
+<h2>Welcome to Forms in Search Page In Express.js</h2>
+<h3>Search Results:</h3>
+
+<table border=2 class='table table-hover'>
+<tr>
+		<th width=150 style="text-align:center">id</th>
+		<th width=150 style="text-align:center">first</th>
+		<th width=150 style="text-align:center">last</th>
+		<th width=150 style="text-align:center">age</th>
+		<th width=150 style="text-align:center">iamge</th>
+		<th width=150 style="text-align:center">Show</th>
+		<th width=150 style="text-align:center">Edit</th>
+		<th width=150 style="text-align:center">Delete</th>
+</tr>
+	<% for(i in employees){ %>
+	<tr>
+		<td width=150><%= employees[i].id %></td>
+		<td width=150><%= employees[i].first %></td>
+		<td width=150><%= employees[i].last %></td>
+		<td width=150><%= employees[i].age %></td>
+		<td width=150><img src='<%= employees[i].image %>'></td>
+		<td width=150><a href='/' class='btn btn-success'>Show</a></td>
+		<td width=150><a href='/' class='btn btn-info'>edit</a></td>
+		<td width=150><a href='/' class='btn btn-danger'>delete</a></td>
+	</tr>
+	<% } %>
+
+</table>
+<% include partials/footer.ejs %>
+
+
+
+

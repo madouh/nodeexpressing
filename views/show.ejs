@@ -1,0 +1,27 @@
+ <% include partials/head.ejs %>
+ 
+<h2>Show Page In Express.js</h2>
+
+<table border=2 class='table table-hover'>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Email</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+<tr>
+<td><%= user.id %></td>
+<td><%= user.name %></td>
+<td><%= user.email %></td>
+<td><a href='/<%=user.id %>/edit' class='btn btn-info'>Edit</a></td>
+<td><form action='/<%= user.id %>/delete' method='POST'>
+<input type="hidden" name="_method" value="delete"/>
+<input type='submit' value='Delete' class='delete_btn btn btn-danger'>
+</td>
+</tr>
+</table>
+<a href='/' class='btn btn-success'>Show all users</a>
+
+<% include partials/footer.ejs %>
+

@@ -4,19 +4,19 @@
 3 info using node@v0.10.37
 4 verbose node symlink /usr/bin/node
 5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart first@0.0.0
-7 info start first@0.0.0
+6 info prestart @0.0.1
+7 info start @0.0.1
 8 verbose unsafe-perm in lifecycle true
-9 info first@0.0.0 Failed to exec start script
-10 error first@0.0.0 start: `node ./bin/www`
+9 info @0.0.1 Failed to exec start script
+10 error @0.0.1 start: `node ./bin/www`
 10 error Exit status 8
-11 error Failed at the first@0.0.0 start script.
-11 error This is most likely a problem with the first package,
+11 error Failed at the @0.0.1 start script.
+11 error This is most likely a problem with the  package,
 11 error not with npm itself.
 11 error Tell the author that this fails on your system:
 11 error     node ./bin/www
 11 error You can get their info via:
-11 error     npm owner ls first
+11 error     npm owner ls
 11 error There is likely additional logging output above.
 12 error System Linux 3.13.0-74-generic
 13 error command "/usr/bin/node" "/usr/bin/npm" "start"
